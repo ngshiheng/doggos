@@ -1,10 +1,18 @@
 {
     "name": "doggos",
     "version": "1.0.0",
-    "main": "index.js",
+    "description": "Just a server-side REST wrapper for [Dog API](https://dog.ceo/dog-api/) built with [GraphQL](https://graphql.org/).",
+    "main": "index.ts",
     "repository": "git@github.com:ngshiheng/doggos.git",
     "author": "Jerry Ng <ngshiheng@gmail.com>",
     "license": "MIT",
+    "keywords": [
+        "typescript",
+        "graphql",
+        "api",
+        "netlify",
+        "apollo"
+    ],
     "devDependencies": {
         "nodemon": "^2.0.2",
         "ts-node": "^8.6.2",
@@ -12,11 +20,13 @@
     },
     "dependencies": {
         "apollo-server": "^2.10.1",
+        "apollo-server-lambda": "^2.10.1",
         "graphql": "^14.6.0",
         "node-fetch": "^2.6.0"
     },
     "scripts": {
-        "start": "nodemon -e ts,graphql -x ts-node src/index.ts"
+        "start": "nodemon -e ts,graphql -x ts-node src/index.ts",
+        "build": "tsc"
     },
     "prettier": {
         "trailingComma": "all",

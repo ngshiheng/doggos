@@ -13,7 +13,7 @@ const localServer = () => {
     });
 };
 
-export const lambdaServer = () => {
+export const createLambdaServer = () => {
     return new ApolloServerLambda({
         typeDefs,
         resolvers,

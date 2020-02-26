@@ -1,8 +1,13 @@
 # Doggos 🐕
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/7748a20f-d485-4097-95f6-b5e68ee231b1/deploy-status)](https://app.netlify.com/sites/dog-api/deploys)
+
 Just a server-side REST wrapper for [Dog API](https://dog.ceo/dog-api/) built with [GraphQL](https://graphql.org/).
 
+
+
 ```
+https://dog-api.netlify.com/
             ,
             |`-.__
             / ' _/

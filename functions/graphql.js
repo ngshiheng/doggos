@@ -1,4 +1,4 @@
-const { createLambdaServer } = require('./bundle/index');
+const { createLambdaServer } = require('./bundle/server');
 
 const graphQLServer = createLambdaServer();
 

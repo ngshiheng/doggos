@@ -1,27 +1,7 @@
-import { ApolloServer } from 'apollo-server';
-import { ApolloServer as ApolloServerLambda } from 'apollo-server-lambda';
-import { resolvers } from './resolvers/queries';
-import { typeDefs } from './schemas/schema';
+import { createLocalServer } from './server';
 
-const localServer = () => {
-    const server = new ApolloServer({
-        typeDefs,
-        resolvers,
-        uploads: false,
-    });
-    server.listen().then(({ url }) => {
-        console.log(`🐶  Server ready at ${url}`);
-    });
-};
+const server = createLocalServer();
 
-export const createLambdaServer = () => {
-    return new ApolloServerLambda({
-        typeDefs,
-        resolvers,
-        uploads: false,
-        introspection: true,
-        playground: true,
-    });
-};
-
-localServer();
+server.listen().then(({ url }) => {
+    console.log(`🐶  Server ready at ${url}`);
+});

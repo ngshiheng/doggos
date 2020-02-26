@@ -19,13 +19,17 @@ https://dog-api.netlify.com/
        `~~~~~``~`
 ```
 
-## Usage
+## Local Usage
 
 1. `yarn install`
 
 2. `yarn start`
 
 3. Make the queries in the GraphQL Playground
+
+## Tryout on Netlify
+
+https://dog-api.netlify.com/
 
 ## List of available queries
 

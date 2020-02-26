@@ -7,6 +7,7 @@ const localServer = () => {
     const server = new ApolloServer({
         typeDefs,
         resolvers,
+        uploads: false,
     });
     server.listen().then(({ url }) => {
         console.log(`🐶  Server ready at ${url}`);
@@ -17,6 +18,7 @@ export const createLambdaServer = () => {
     return new ApolloServerLambda({
         typeDefs,
         resolvers,
+        uploads: false,
         introspection: true,
         playground: true,
     });

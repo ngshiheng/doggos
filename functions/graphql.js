@@ -1,8 +1,8 @@
 const { createLambdaServer } = require('./bundle/index');
 
-const GraphQLServer = createLambdaServer();
+const graphQLServer = createLambdaServer();
 
-exports.handler = GraphQLServer.createHandler({
+exports.handler = graphQLServer.createHandler({
     cors: {
         origin: '*',
     },

@@ -15,12 +15,12 @@
     ],
     "devDependencies": {
         "nodemon": "^2.0.2",
-        "ts-node": "^8.6.2",
-        "typescript": "^3.8.2"
+        "ts-node": "^8.7.0",
+        "typescript": "^3.8.3"
     },
     "dependencies": {
-        "apollo-server": "^2.10.1",
-        "apollo-server-lambda": "^2.10.1",
+        "apollo-server": "^2.11.0",
+        "apollo-server-lambda": "^2.11.0",
         "graphql": "^14.6.0",
         "node-fetch": "^2.6.0"
     },

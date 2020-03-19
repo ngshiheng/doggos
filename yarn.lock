@@ -431,7 +431,7 @@ apollo-server-express@^2.11.0:
     subscriptions-transport-ws "^0.9.16"
     type-is "^1.6.16"
 
-apollo-server-lambda@^2.10.1:
+apollo-server-lambda@^2.11.0:
   version "2.11.0"
   resolved "https://registry.yarnpkg.com/apollo-server-lambda/-/apollo-server-lambda-2.11.0.tgz#ca3dce5475f9a611a61f8eef43a43bb3b450b24b"
   integrity sha512-44jkwT0vKsw8F8/ytC5vOu2mXZlcp1XwAg7QykhqLHi/jKvMe94GeTnhOgZPIHAZwjrEVhFQjEPJdkXw1ccm8A==
@@ -459,7 +459,7 @@ apollo-server-types@^0.3.0:
     apollo-server-caching "^0.5.1"
     apollo-server-env "^2.4.3"
 
-apollo-server@^2.10.1:
+apollo-server@^2.11.0:
   version "2.11.0"
   resolved "https://registry.yarnpkg.com/apollo-server/-/apollo-server-2.11.0.tgz#f901f820716716e8693be8b0e234849f5819a4ae"
   integrity sha512-UhW6RHPBMWZy1v7KhzssUnxPBxpu9fGFajtqP68vtvvP3+xa2Y2GUg0594bHcUcLK+BjdMBQQSW27i0yQ/Fz9g==
@@ -1776,7 +1776,7 @@ ts-invariant@^0.4.0:
   dependencies:
     tslib "^1.9.3"
 
-ts-node@^8.6.2:
+ts-node@^8.7.0:
   version "8.7.0"
   resolved "https://registry.yarnpkg.com/ts-node/-/ts-node-8.7.0.tgz#266186947596bef9f3a034687595b30e31b20976"
   integrity sha512-s659CsHrsxaRVDEleuOkGvbsA0rWHtszUNEt1r0CgAFN5ZZTQtDzpsluS7W5pOGJIa1xZE8R/zK4dEs+ldFezg==
@@ -1800,7 +1800,7 @@ type-is@^1.6.16, type-is@~1.6.17, type-is@~1.6.18:
     media-typer "0.3.0"
     mime-types "~2.1.24"
 
-typescript@^3.8.2:
+typescript@^3.8.3:
   version "3.8.3"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.8.3.tgz#409eb8544ea0335711205869ec458ab109ee1061"
   integrity sha512-MYlEfn5VrLNsgudQTVJeNaQFUAI7DkhnOjdpAp4T+ku1TfQClewlbSuTVHiA+8skNBgaf02TL/kLOvig4y3G8w==

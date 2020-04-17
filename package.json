@@ -1,6 +1,6 @@
 {
     "name": "doggos",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "description": "Just a server-side REST wrapper for [Dog API](https://dog.ceo/dog-api/) built with [GraphQL](https://graphql.org/).",
     "main": "index.ts",
     "repository": "git@github.com:ngshiheng/doggos.git",
@@ -11,7 +11,7 @@
         "graphql",
         "api",
         "netlify",
-        "apollo"
+        "apollo-lambda"
     ],
     "devDependencies": {
         "nodemon": "^2.0.3",

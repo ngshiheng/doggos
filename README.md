@@ -4,8 +4,6 @@
 
 Just a server-side REST wrapper for [Dog API](https://dog.ceo/dog-api/) built with [GraphQL](https://graphql.org/).
 
-
-
 ```
 https://dog-api.netlify.com/
             ,
@@ -29,7 +27,7 @@ https://dog-api.netlify.com/
 
 ## Tryout on Netlify
 
-https://dog-api.netlify.com/
+https://dog-api.netlify.app/
 
 ## List of available queries
 
@@ -43,7 +41,7 @@ Dog API [Documentation](https://dog.ceo/dog-api/documentation/)
 }
 ```
 
-### Random image
+### Fetch a random dog image
 
 ```graphql
 {
@@ -65,7 +63,7 @@ Dog API [Documentation](https://dog.ceo/dog-api/documentation/)
 }
 ```
 
-### By sub-breed
+### List all sub-breed
 
 ```graphql
 {
@@ -76,7 +74,7 @@ Dog API [Documentation](https://dog.ceo/dog-api/documentation/)
 }
 ```
 
-### Browser breed list
+### Browse by a breed
 
 ```graphql
 query {

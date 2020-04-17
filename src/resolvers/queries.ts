@@ -15,16 +15,16 @@ const listAllBreeds = async () => {
 };
 
 const randomImage = () =>
-    fetch(`${BASE_URL}/breeds/image/random`).then(res => res.json());
+    fetch(`${BASE_URL}/breeds/image/random`).then((res) => res.json());
 
 const byBreed = () =>
-    fetch(`${BASE_URL}/breed/hound/images`).then(res => res.json());
+    fetch(`${BASE_URL}/breed/hound/images`).then((res) => res.json());
 
 const bySubBreed = () =>
-    fetch(`${BASE_URL}/breed/hound/list`).then(res => res.json());
+    fetch(`${BASE_URL}/breed/hound/list`).then((res) => res.json());
 
 const breed = (parent: any, arg: any) =>
-    fetch(`${BASE_URL}/breed/${arg.type}/images/random`).then(res =>
+    fetch(`${BASE_URL}/breed/${arg.type}/images/random`).then((res) =>
         res.json(),
     );
 

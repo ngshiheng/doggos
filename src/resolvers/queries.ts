@@ -1,32 +1,50 @@
-import fetch from 'node-fetch';
+import { ApolloError } from 'apollo-server';
 
-const BASE_URL = 'https://dog.ceo/api';
+const listAllBreeds = async (_source, _args, { dataSources }) => {
+    try {
+        const breedList: string[] = [];
+        const data = await dataSources.dogAPI.getListAllBreeds();
 
-const listAllBreeds = async () => {
-    let breedList: string[] = [];
-    const res = await fetch(`${BASE_URL}/breeds/list/all`);
-    const data = await res.json();
-    if (data.message) {
         for (const breed in data.message) {
             breedList.push(breed);
         }
+        return breedList;
+    } catch (error) {
+        throw new ApolloError(error);
     }
-    return breedList;
 };
 
-const randomImage = () =>
-    fetch(`${BASE_URL}/breeds/image/random`).then((res) => res.json());
+const randomImage = (_source, _args, { dataSources }) => {
+    try {
+        return dataSources.dogAPI.getRandomImage();
+    } catch (error) {
+        throw new ApolloError(error);
+    }
+};
 
-const byBreed = () =>
-    fetch(`${BASE_URL}/breed/hound/images`).then((res) => res.json());
+const byBreed = (_source, _args, { dataSources }) => {
+    try {
+        return dataSources.dogAPI.getByBreed();
+    } catch (error) {
+        throw new ApolloError(error);
+    }
+};
 
-const bySubBreed = () =>
-    fetch(`${BASE_URL}/breed/hound/list`).then((res) => res.json());
+const bySubBreed = (_source, _args, { dataSources }) => {
+    try {
+        return dataSources.dogAPI.getBySubBreed();
+    } catch (error) {
+        throw new ApolloError(error);
+    }
+};
 
-const breed = (parent: any, arg: any) =>
-    fetch(`${BASE_URL}/breed/${arg.type}/images/random`).then((res) =>
-        res.json(),
-    );
+const breed = (_source, { type }, { dataSources }) => {
+    try {
+        return dataSources.dogAPI.getBreed(type);
+    } catch (error) {
+        throw new ApolloError(error);
+    }
+};
 
 export const resolvers = {
     Query: {

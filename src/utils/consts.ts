@@ -1,3 +1,5 @@
+export const DATA_SOURCE_URL = 'https://dog.ceo/api';
+
 export const DEFAULT_QUERY_LIST_ALL_BREEDS = `
 query {
     listAllBreeds

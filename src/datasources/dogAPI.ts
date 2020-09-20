@@ -1,6 +1,14 @@
 import { RESTDataSource } from 'apollo-datasource-rest';
 import { DATA_SOURCE_URL } from '../utils/consts';
 
+export interface IDogAPI {
+    dogAPI: DogAPI;
+}
+
+export interface IDataSources {
+    dataSources: IDogAPI;
+}
+
 export class DogAPI extends RESTDataSource {
     constructor() {
         super();

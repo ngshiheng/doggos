@@ -13,7 +13,7 @@ import {
 
 const endpoint = 'https://doggos-api.netlify.app/';
 
-export const createLocalServer = () =>
+export const createLocalServer = (): ApolloServer =>
     new ApolloServer({
         typeDefs,
         resolvers,
@@ -50,7 +50,7 @@ export const createLocalServer = () =>
         },
     });
 
-export const createLambdaServer = () =>
+export const createLambdaServer = (): ApolloServerLambda =>
     new ApolloServerLambda({
         typeDefs,
         resolvers,

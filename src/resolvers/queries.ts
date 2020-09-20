@@ -1,4 +1,5 @@
 import { ApolloError } from 'apollo-server';
+import { IDataSources } from '../datasources/dogAPI';
 
 const listAllBreeds = async (_source, _args, { dataSources }) => {
     try {
@@ -14,7 +15,7 @@ const listAllBreeds = async (_source, _args, { dataSources }) => {
     }
 };
 
-const randomImage = (_source, _args, { dataSources }) => {
+const randomImage = (_source, _args, { dataSources }: IDataSources) => {
     try {
         return dataSources.dogAPI.getRandomImage();
     } catch (error) {
@@ -22,7 +23,7 @@ const randomImage = (_source, _args, { dataSources }) => {
     }
 };
 
-const byBreed = (_source, _args, { dataSources }) => {
+const byBreed = (_source, _args, { dataSources }: IDataSources) => {
     try {
         return dataSources.dogAPI.getByBreed();
     } catch (error) {
@@ -30,7 +31,7 @@ const byBreed = (_source, _args, { dataSources }) => {
     }
 };
 
-const bySubBreed = (_source, _args, { dataSources }) => {
+const bySubBreed = (_source, _args, { dataSources }: IDataSources) => {
     try {
         return dataSources.dogAPI.getBySubBreed();
     } catch (error) {
@@ -38,7 +39,7 @@ const bySubBreed = (_source, _args, { dataSources }) => {
     }
 };
 
-const breed = (_source, { type }, { dataSources }) => {
+const breed = (_source, { type }, { dataSources }: IDataSources) => {
     try {
         return dataSources.dogAPI.getBreed(type);
     } catch (error) {

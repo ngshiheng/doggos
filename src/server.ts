@@ -1,5 +1,6 @@
 import { ApolloServer } from 'apollo-server';
 import { ApolloServer as ApolloServerLambda } from 'apollo-server-lambda';
+import { DogAPI } from './datasources/dogAPI';
 import { resolvers } from './resolvers/queries';
 import { typeDefs } from './schemas/schema';
 import {
@@ -10,37 +11,38 @@ import {
     DEFAULT_QUERY_RANDOM_IMAGE,
 } from './utils/consts';
 
-const endpoint = 'https://dog-api.netlify.app/';
+const endpoint = 'https://doggos-api.netlify.app/';
 
 export const createLocalServer = () =>
     new ApolloServer({
         typeDefs,
         resolvers,
+        dataSources: () => ({ dogAPI: new DogAPI() }),
         uploads: false,
         playground: {
             tabs: [
                 {
-                    endpoint,
+                    endpoint: '',
                     name: 'List all breeds',
                     query: DEFAULT_QUERY_LIST_ALL_BREEDS,
                 },
                 {
-                    endpoint,
+                    endpoint: '',
                     name: 'Fetch a random dog image URL',
                     query: DEFAULT_QUERY_RANDOM_IMAGE,
                 },
                 {
-                    endpoint,
+                    endpoint: '',
                     name: 'Fetch all images by breed',
                     query: DEFAULT_QUERY_BY_BREED,
                 },
                 {
-                    endpoint,
+                    endpoint: '',
                     name: 'List all sub-breed',
                     query: DEFAULT_QUERY_BY_SUB_BREED,
                 },
                 {
-                    endpoint,
+                    endpoint: '',
                     name: 'Fetch image of a specific breed',
                     query: DEFAULT_QUERY_BY_SPECIFIC_BREED,
                 },
@@ -52,6 +54,7 @@ export const createLambdaServer = () =>
     new ApolloServerLambda({
         typeDefs,
         resolvers,
+        dataSources: () => ({ dogAPI: new DogAPI() }),
         uploads: false,
         introspection: true,
         playground: {

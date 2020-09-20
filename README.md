@@ -5,7 +5,7 @@
 Just a server-side REST wrapper for [Dog API](https://dog.ceo/dog-api/) built with [GraphQL](https://graphql.org/).
 
 ```
-https://dog-api.netlify.com/
+https://doggos-api.netlify.app/
             ,
             |`-.__
             / ' _/
@@ -27,7 +27,7 @@ https://dog-api.netlify.com/
 
 ## Tryout on Netlify
 
-https://dog-api.netlify.app/
+https://doggos-api.netlify.app/
 
 ## List of available queries
 
